@@ -1,0 +1,45 @@
+.range-slider::-webkit-slider-thumb {
+    width: 20px; /* Adjust the thumb size */
+    height: 20px;
+    background: #2563eb; /* Tailwind's blue-600 */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative; /* Needed to position the inner circle */
+    
+  }
+
+  .range-slider::-webkit-slider-thumb::before {
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the inner circle */
+    width: 10px; /* Adjust the size of the inner circle */
+    height: 10px;
+    background: white; /* Color of the inner circle */
+    border-radius: 50%;
+  }
+
+  .range-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #2563eb;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative; /* For inner circle positioning */
+  }
+
+  .range-slider::-moz-range-thumb::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  }
