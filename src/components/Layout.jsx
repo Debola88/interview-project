@@ -4,6 +4,7 @@ import SideBar from './SideBar'
 import Header from './Header'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+import NavBar from './NavBar';
 
 function Layout() {
     return (
@@ -13,11 +14,7 @@ function Layout() {
                 <SideBar />
                 <div className="flex-1 min-h-full relative overflow-y-auto">
                     <div className='absolute w-full min-h-screen overflow-auto'>
-                        <div className=' md:hidden pt-12 px-6 flex justify-between font-bold w-full'>
-                            <span>Overview</span>
-                            <span>Progress tracker</span>
-                            <span>Notification</span>
-                        </div>
+                        <NavBar />
                         <Outlet />
                     </div>
                 </div>

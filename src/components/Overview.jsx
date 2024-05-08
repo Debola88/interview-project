@@ -4,7 +4,7 @@ import man from '../assets/Ellipse 260.png'
 import clock from '../assets/pepicons-pencil_countdown.png'
 import woman from '../assets/Ellipse 260 (1).png'
 import man2 from '../assets/Ellipse 260 (2).png'
-import { HiClipboardList } from "react-icons/hi";
+import { HiClipboardList, HiOutlineSearch } from "react-icons/hi";
 import MyTutors from './MyTutors'
 import ProgressExample from './ProgressExample'
 import RangeSlider from './RangeSlider'
@@ -15,7 +15,7 @@ function Overview() {
 
 
     return (
-        <div className=' px-14 max-md:px-5 pt-12 max-md:pt-0 relative mx-auto pb-[5rem]'>
+        <div className=' px-14 max-md:px-5 pt-12 max-md:pt-0 relative mx-auto pb-24'>
             <h1 className='max-md:hidden font-bold text-3xl  max-md:text-2xl pb-8 w-full'>Overview</h1>
 
 
@@ -58,7 +58,7 @@ function Overview() {
                 {/* mobile version */}
                 <div className='md:hidden max-w-full space-y-4 border-2 max-md:rounded-lg max-md:bg-[#FFFFFF] p-5'>
                     <div className='flex justify-between w-full md:pb-5 md:pt-8 items-center '>
-                        <h2 className='font-bold text-2xl max-md:text-base max-md:pt-0'>Upcoming Classes</h2>
+                        <h2 className='font-bold text-lg max-md:pt-0'>Upcoming Classes</h2>
                         <p className='text-sm font-semibold md:hidden text-[#1D8EED] cursor-pointer'>See All</p>
                     </div>
                     <div className='flex md:border-b pb-4 items-center justify-between'>
@@ -99,7 +99,7 @@ function Overview() {
                 <div className='max-md:hidden max-w-[400px] space-y-4'>
                     <div className='pb-5 pt-8 flex justify-between items-center'>
                         <h2 className='font-bold text-2xl '>Assignments</h2>
-                        <p className='text-sm text-[#1D8EED] cursor-pointer'>See all</p>
+                        <p className='text-sm font-semibold text-[#1D8EED] cursor-pointer'>See All</p>
                     </div>
                     <div className='flex border-b-2 md:max-w-max pb-[1.35rem] space-x-8 items-center'>
                         <div className='text-2xl text-[#0052B4]'><HiClipboardList /></div>
@@ -126,8 +126,8 @@ function Overview() {
                 {/* Mobile version */}
                 <div className='md:hidden max-w-full space-y-4 border-2 max-md:rounded-lg max-md:bg-[#FFFFFF] p-5'>
                     <div className='pb-5 pt-8 flex justify-between items-center'>
-                        <h2 className='font-bold text-2xl '>Assignments</h2>
-                        <p className='text-sm text-[#1D8EED] cursor-pointer'>See all</p>
+                        <h2 className='font-bold text-xl '>Assignments</h2>
+                        <p className='text-sm font-semibold text-[#1D8EED] cursor-pointer'>See All</p>
                     </div>
                     <div className='flex md:max-w-max pb-[1.35rem] space-x-8 items-center'>
                         <div className='text-2xl text-[#0052B4]'><HiClipboardList /></div>
@@ -170,10 +170,10 @@ function Overview() {
                     <MyTutors />
                 </div>
                 {/* Mobile version */}
-                <div className='md:hidden'>
-                    <div className='pb-5 pt-8 flex justify-between border-b-2 items-center'>
-                        <h2 className='font-bold text-2xl '>My Tutors</h2>
-                        <p className='text-sm text-[#09BCFF] cursor-pointer'>See all</p>
+                <div className='md:hidden border-2 max-md:rounded-lg max-md:bg-[#FFFFFF] p-5'>
+                    <div className='pb-5 pt-8 flex justify-between items-center'>
+                        <h2 className='font-bold text-xl '>My Tutors</h2>
+                        <p className='text-sm font-semibold text-[#09BCFF] cursor-pointer'>See All</p>
                     </div>
                     <MyTutors />
                     <MyTutors />
@@ -181,10 +181,11 @@ function Overview() {
                     <MyTutors />
                     <MyTutors />
                 </div>
-                <div className='max-w-[400px] space-y-4'>
+
+                <div className='max-md:hidden max-w-[400px] space-y-4'>
                     <div className='pt-8 border-b-2 pb-5 flex justify-between items-center'>
-                        <h2 className='font-bold text-2xl '>Messages</h2>
-                        <p className='text-sm text-[#1D8EED] cursor-pointer'>See all</p>
+                        <h2 className='font-bold text-xl '>Messages</h2>
+                        <p className='text-sm semibold text-[#1D8EED] cursor-pointer'>See All</p>
                     </div>
                     <div className='flex border-b w-full pb-2.5 space-x-[1.02rem] items-start'>
                         <div className='text-xl text-[rgb(0,82,180)] font-semibold w-11 py-2 px-2 rounded-xl bg-[#F0F7FF] uppercase'>aa</div>
@@ -211,9 +212,69 @@ function Overview() {
                         <p className='text-[#8A8A8A] text-xs'>10:25 am</p>
                     </div>
                 </div>
-                <div className='max-w-[400px] space-y-4'>
+                {/* Mobile version */}
+                <div className='md:hidden max-w-full space-y-4 pt-10'>
+                    <div className="relative">
+                        <HiOutlineSearch fontSize={20} className="text-gray-400 absolute top-1/2 left-3 -translate-y-1/2" />
+                        <input
+                            type="text"
+                            placeholder="Search for messages"
+                            className="text-base focus:outline-none active:outline-none border-none bg-white border-gray-300 w-full h-10 pl-11 pr-4 rounded"
+                        />
+                    </div>
+                    <div className='pt-2 pb-5 flex justify-between items-center'>
+                        <h2 className='font-bold text-xl '>Messages</h2>
+                        <p className='text-sm text-[#1D8EED] cursor-pointer'>See all</p>
+                    </div>
+                    <div className='flex justify-between w-full pb-2.5 items-start'>
+                        <div className='max-w-max'><img src={man} alt='' className='rounded-full w-auto max-h-12 mr-3' /></div>
+                        <div className='flex flex-col w-2/3'>
+                            <span className='font-semibold text-sm text-[#333333]'>Adepoju Ademola</span>
+                            <span className='text-xs text-[#9E9E9E]'>Hi there! I wanted to enquire about
+                                the list of the class...</span>
+                        </div>
+                        <div className='flex flex-col items-center gap-2'>
+                            <p className='text-[#8A8A8A] text-xs'>10:25</p>
+                            <span className='max-h-10 w-auto text-white px-2 py-1 rounded text-xs bg-[#0162E8]'>2</span>
+                        </div>
+                    </div>
+                    <div className='flex justify-between w-full pb-2.5 items-start'>
+                        <div className='max-w-max'><img src={woman} alt='' className='rounded-full w-auto max-h-12 mr-3' /></div>
+                        <div className='flex flex-col w-2/3'>
+                            <span className='font-semibold text-sm text-[#333333]'>Badiru Pomile</span>
+                            <span className='text-xs text-[#9E9E9E]'>Hi there! I wanted to enquire about
+                                the list of the class...</span>
+                        </div>
+                        <div className='flex flex-col items-center gap-2'>
+                            <p className='text-[#8A8A8A] text-xs'>10:25</p>
+                            <span className='max-h-10 w-auto text-white px-2 py-1 rounded text-xs bg-[#0162E8]'>2</span>
+                        </div>                    </div>
+                    <div className='flex justify-between w-full pb-2.5  items-start'>
+                        <div className='max-w-max'><img src={man2} alt='' className='rounded-full w-auto max-h-12 mr-3' /></div>
+                        <div className='flex flex-col w-2/3'>
+                            <span className='font-semibold text-sm text-[#333333]'>Emmanuel John</span>
+                            <span className='text-xs text-[#9E9E9E]'>Hi there! I wanted to enquire about
+                                the list of the class...</span>
+                        </div>
+                        <div className='flex flex-col items-center gap-2'>
+                            <p className='text-[#8A8A8A] text-xs'>10:25</p>
+                            <span className='max-h-10 w-auto text-white px-2 py-1 rounded text-xs bg-[#0162E8]'>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div className='max-md:hidden max-w-[400px] space-y-4'>
                     <div className='pb-5 pt-8 '>
                         <h2 className='font-bold text-2xl '>Monthly Class Attendance</h2>
+                    </div>
+                    <RangeSlider />
+                    <RangeSlider />
+                    <RangeSlider />
+                    <RangeSlider />
+                </div>
+                {/* mobile version */}
+                <div className='md:hidden max-w-[400px] space-y-4'>
+                    <div className='pb-5 pt-8 border-b-[5px]  '>
+                        <h2 className='font-bold text-xl'>Monthly Class Attendance</h2>
                     </div>
                     <RangeSlider />
                     <RangeSlider />
