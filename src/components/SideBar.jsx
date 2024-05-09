@@ -26,9 +26,15 @@ function SideBar() {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
+    const [isDropdownoneOpen, setIsDropdownoneOpen] = useState(false);
+
+    const toggleDropdownone = () => {
+        setIsDropdownoneOpen(!isDropdownoneOpen);
+    };
+
 
     return (
-        <div className='max-md:hidden bg-gradient-to-b from-[#1B87E1E0]/[88%] to-[#0C2E4A] w-52 flex flex-col text-[#FFFFFF] text-sm'>
+        <div className='max-lg:hidden bg-gradient-to-b from-[#1B87E1E0]/[88%] to-[#0C2E4A] w-52 flex flex-col text-[#FFFFFF] text-sm'>
             <div className='pt-14 pb-4 px-6 h-screen overflow-y-auto flex flex-col'>
                 <div className='mb-10 w-full'>
                     <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/50 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdown}><GoHome /> Dashboard
@@ -63,12 +69,36 @@ function SideBar() {
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><MdOutlineAssignment />Assignment<FaAngleRight /></span>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><img src={imgtutor} alt='' />Tutors<FaAngleRight /></span>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><TbMessage />Messaging<FaAngleRight /></span>
-                <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><TiCreditCard />Payment<FaAngleRight /></span>
+                <div className='w-full'>
+                    <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/50 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdownone}><TiCreditCard />Payment
+                        <span>
+                            <FaAngleRight />
+                        </span>
+                    </button>
+                    <Transition
+                        show={isDropdownoneOpen}
+                        enter="transition-all duration-300 ease-in-out"
+                        enterFrom="max-h-0 opacity-0"
+                        enterTo="max-h-screen opacity-100"
+                        leave="transition-all duration-300 ease-in-out"
+                        leaveFrom="max-h-screen opacity-100"
+                        leaveTo="max-h-0 opacity-0"
+                    >
+                        <ul>
+                            <li>
+                                <Link to="/makepayment"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Make Payment</span></Link>
+                            </li>
+                            <li>
+                                <Link to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Payment History</span></Link>
+                            </li>
+                        </ul>
+                    </Transition>
+                </div>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 mt-10 border border-[#FFFFFF]/10'><MdOutlineFeedback />Feedback</span>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 mt-16 border border-[#FFFFFF]/10'><IoSettingsOutline />Settings<FaAngleRight /></span>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><MdLogout />Logout<FaAngleRight /></span>
                 <img src={refer} alt='' className='w-full h-auto mt-5' />
-                <button className='py-3 mb-16 w-full bg-[#186BAD] hover:bg-[#186BAD]/50 transition-all  rounded'>Refer & Earn</button>
+                <Link to="/refer"><button className='py-3 mb-16 w-full bg-[#186BAD] hover:bg-[#186BAD]/50 transition-all  rounded'>Refer & Earn</button></Link>
             </div>
         </div>
     )

@@ -14,7 +14,6 @@ function Layout() {
                 <SideBar />
                 <div className="flex-1 min-h-full relative overflow-y-auto">
                     <div className='absolute w-full min-h-screen overflow-auto'>
-                        <NavBar />
                         <Outlet />
                     </div>
                 </div>
