@@ -22,7 +22,7 @@ function Notification() {
                 <NotificationBar />
                 <NotificationBar />
 
-                <div className=''>
+                <div className='md:hidden'>
                     <div className='flex justify-between pb-5'>
                         <p className='font-bold text-sm text-[#242F48]'>Today</p>
                         <p className='text-sm font-semibold text-[#0162E8] cursor-pointer'>Set Day</p>

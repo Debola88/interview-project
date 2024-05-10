@@ -122,7 +122,7 @@ const MobileSidebar = () => {
                     </li>
 
                     <li className=" pt-10">
-                        <Link to="/" onClick={toggleSidebar}>
+                        <Link to="#" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <img src={imgclass} alt='' />Class
                                 <span className='ml-auto'>
@@ -133,7 +133,7 @@ const MobileSidebar = () => {
                     </li>
 
                     <li className="">
-                        <Link to="/" onClick={toggleSidebar}>
+                        <Link to="#" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <MdOutlineAssignment />Assignment
                                 <span className='ml-auto'>
@@ -162,7 +162,7 @@ const MobileSidebar = () => {
                         >
                             <ul>
                                 <li>
-                                    <Link to="/"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>My Tutors</span></Link>
+                                    <Link to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>My Tutors</span></Link>
                                 </li>
                                 <li>
                                     <Link to="/managetutor"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Manage Tutors</span></Link>
@@ -172,7 +172,7 @@ const MobileSidebar = () => {
                     </li>
 
                     <li className="">
-                        <Link to="/" onClick={toggleSidebar}>
+                        <Link to="#" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <TbMessage />Messaging
                                 <span className='ml-auto'>
@@ -211,7 +211,7 @@ const MobileSidebar = () => {
                     </li>
 
                     <li className="">
-                        <Link to="/" onClick={toggleSidebar}>
+                        <Link to="#" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <MdOutlineFeedback />Feedback
                                 <span className='ml-auto'>
@@ -222,7 +222,7 @@ const MobileSidebar = () => {
                     </li>
 
                     <li className="pt-10">
-                        <Link to="/" onClick={toggleSidebar}>
+                        <Link to="#" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <IoSettingsOutline />Settings
                                 <span className='ml-auto'>
@@ -232,7 +232,7 @@ const MobileSidebar = () => {
                         </Link>
                     </li>
                     <li className="">
-                        <Link to="/" onClick={toggleSidebar}>
+                        <Link to="#" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <MdLogout />Logout
                                 <span className='ml-auto'>
