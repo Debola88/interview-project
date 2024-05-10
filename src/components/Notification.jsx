@@ -1,19 +1,11 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import NavBar from './NavBar'
-import woman from '../assets/Ellipse 197.png'
-import { RiDeleteBin6Line } from "react-icons/ri";
 import NotificationBar from './NotificationBar';
 import MobileNotification from './MobileNotification';
 
 
 
 function Notification() {
-
-    const [isChecked, setIsChecked] = useState(false);
-    const handleCheckboxChange = () => {
-        setIsChecked(!isChecked);
-    };
 
     return (
         <>

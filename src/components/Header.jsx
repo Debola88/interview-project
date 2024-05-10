@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo (1).png'
-import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt } from 'react-icons/hi'
+import { HiOutlineSearch } from 'react-icons/hi'
 import { CiMail } from "react-icons/ci";
 import { PiBellLight } from "react-icons/pi";
 import quest from '../assets/question.png'
@@ -18,13 +18,13 @@ function Header() {
             <div className='lg:hidden'>
                 <MobileSidebar />
             </div>
-            <div className='max-lg:hidden space-x-8 relative w-full text-gray-400 text-sm flex justify-between items-center'>
+            <div className='max-lg:hidden space-x-8 relative w-full text-black text-sm flex justify-between items-center'>
                 <img src={logo} alt='' className='flex justify-start py-4 max-lg:hidden' />
                 <div className="relative max-md:hidden">
                     <HiOutlineSearch fontSize={20} className="text-gray-400 absolute top-1/2 left-3 -translate-y-1/2" />
                     <input
                         type="text"
-                        placeholder="Search..."
+                        placeholder="Search"
                         className="text-sm focus:outline-none active:outline-none border border-gray-300 w-[24rem] h-10 pl-11 pr-4 rounded-full"
                     />
                 </div>
@@ -37,13 +37,13 @@ function Header() {
                     <span className='flex gap-1 text-[#242F48] items-center text-2xl cursor-pointer'><div className='relative flex cursor-pointer'><img src={profile} alt='profile pic' className='rounded-full w-auto h-[35px] max-h-16 object-cover bg-no-repeat bg-center' /><span className='absolute bottom-0 -right-1 w-[0.75rem] h-[0.75rem] block rounded-full border-2 border-[#FFFFFF] bg-[#35B94B]'></span></div><MdKeyboardArrowDown /></span>
                 </div>
             </div>
-            <div className='space-x-8 lg:hidden relative flex text-gray-400 text-sm items-center'>
+            <div className='space-x-8 lg:hidden relative flex text-black text-sm items-center'>
                 <img src={logo} alt='' className='flex justify-start py-4 max-lg:hidden' />
                 <div className="relative max-md:hidden">
                     <HiOutlineSearch fontSize={20} className="text-gray-400 absolute top-1/2 left-3 -translate-y-1/2" />
                     <input
                         type="text"
-                        placeholder="Search..."
+                        placeholder="Search"
                         className="text-sm focus:outline-none active:outline-none border border-gray-300 w-[24rem] h-10 pl-11 pr-4 rounded-full"
                     />
                 </div>

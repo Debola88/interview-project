@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import man from '../assets/Ellipse 260.png'
 import clock from '../assets/pepicons-pencil_countdown.png'
 import woman from '../assets/Ellipse 260 (1).png'
 import man2 from '../assets/Ellipse 260 (2).png'
 import { HiClipboardList, HiOutlineSearch } from "react-icons/hi";
 import MyTutors from './MyTutors'
-import ProgressExample from './ProgressExample'
 import RangeSlider from './RangeSlider'
 import NavBar from './NavBar'
 
