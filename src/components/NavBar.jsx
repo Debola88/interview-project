@@ -29,7 +29,7 @@ function NavBar() {
                             }`}
                         onClick={() => handleNavClick(item.name)} // Handle click event
                     >
-                        <li className="relative max-md:text-base text-2xl font-semibold px-6 pb-3">
+                        <li className="relative max-md:text-base text-2xl font-semibold px-5 pb-3">
 
                             {item.name}
 
