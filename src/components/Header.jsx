@@ -47,8 +47,8 @@ function Header() {
                         className="text-sm focus:outline-none active:outline-none border border-gray-300 w-[24rem] h-10 pl-11 pr-4 rounded-full"
                     />
                 </div>
-                <div className="flex float-end justify-end items-center gap-5">
-                    <span className='cursor-pointer text-2xl text-[#242F48] flex relative'><PiBellLight /><span className='absolute -right-1 w-[0.75rem] h-[0.75rem] block rounded-full border-2 border-[#A4E8AF] bg-[#35B94B]'></span></span>
+                <div className="flex float-end justify-end items-center gap-3">
+                <span className='max-w-max w-auto py-2 px-2 bg-[#F5F5F5] rounded-full'><span className='cursor-pointer text-2xl text-[#242F48] flex relative'><PiBellLight /><span className='absolute -right-1 w-[0.75rem] h-[0.75rem] block rounded-full border-2 border-[#A4E8AF] bg-[#35B94B]'></span></span></span>
                     <span className='flex gap-1 text-[#242F48] items-center text-2xl cursor-pointer'><div className='relative flex cursor-pointer'><img src={profile} alt='profile pic' className='rounded-full w-auto h-[35px] max-h-16 object-cover bg-no-repeat bg-center' /><span className='absolute bottom-0 -right-1 w-[0.75rem] h-[0.75rem] block rounded-full border-2 border-[#FFFFFF] bg-[#35B94B]'></span></div><MdKeyboardArrowDown /></span>
                 </div>
             </div>
