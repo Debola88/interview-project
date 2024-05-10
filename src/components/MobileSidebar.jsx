@@ -37,6 +37,12 @@ const MobileSidebar = () => {
         setIsDropdownoneOpen(!isDropdownoneOpen);
     };
 
+    const [isDropdowntwoOpen, setIsDropdowntwoOpen] = useState(false);
+
+    const toggleDropdowntwo = () => {
+        setIsDropdowntwoOpen(!isDropdowntwoOpen);
+    };
+
     const getPageName = (path) => {
         switch (path) {
             case '/':
@@ -47,6 +53,8 @@ const MobileSidebar = () => {
                 return 'Refer a Friend';
             case '/makepayment':
                 return 'Make Payment';
+            case '/managetutor':
+                return 'Manage Tutors';
             default:
                 return 'Page Not Found';
         }
@@ -135,15 +143,32 @@ const MobileSidebar = () => {
                         </Link>
                     </li>
 
+                    {/* mobile version */}
                     <li className="">
-                        <Link to="/" onClick={toggleSidebar}>
-                            <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
-                                <img src={imgtutor} alt='' />Tutors
-                                <span className='ml-auto'>
-                                    <FaAngleRight />
-                                </span>
-                            </button>
-                        </Link>
+                        <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdowntwo}>
+                        <img src={imgtutor} alt='' />Tutors
+                            <span className='ml-auto'>
+                                <FaAngleRight />
+                            </span>
+                        </button>
+                        <Transition
+                            show={isDropdowntwoOpen}
+                            enter="transition-all duration-300 ease-in-out"
+                            enterFrom="max-h-0 opacity-0"
+                            enterTo="max-h-screen opacity-100"
+                            leave="transition-all duration-300 ease-in-out"
+                            leaveFrom="max-h-screen opacity-100"
+                            leaveTo="max-h-0 opacity-0"
+                        >
+                            <ul>
+                                <li>
+                                    <Link to="/"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>My Tutors</span></Link>
+                                </li>
+                                <li>
+                                    <Link to="/managetutor"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Manage Tutors</span></Link>
+                                </li>
+                            </ul>
+                        </Transition>
                     </li>
 
                     <li className="">
@@ -157,18 +182,8 @@ const MobileSidebar = () => {
                         </Link>
                     </li>
 
-                    <li className="md:hidden">
-                        <Link to="/makepayment" onClick={toggleSidebar}>
-                            <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
-                                <TiCreditCard />Payment
-                                <span className='ml-auto'>
-                                    <FaAngleRight />
-                                </span>
-                            </button>
-                        </Link>
-                    </li>
                     {/* Mobile version */}
-                    <li className="max-md:hidden">
+                    <li className="">
                         <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdownone}>
                             <TiCreditCard />Payment
                             <span className='ml-auto'>

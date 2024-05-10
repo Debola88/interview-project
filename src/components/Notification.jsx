@@ -4,6 +4,8 @@ import NavBar from './NavBar'
 import woman from '../assets/Ellipse 197.png'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import NotificationBar from './NotificationBar';
+import MobileNotification from './MobileNotification';
+
 
 
 function Notification() {
@@ -27,6 +29,20 @@ function Notification() {
                 <NotificationBar />
                 <NotificationBar />
                 <NotificationBar />
+
+                <div className=''>
+                    <div className='flex justify-between pb-5'>
+                        <p className='font-bold text-sm text-[#242F48]'>Today</p>
+                        <p className='text-sm font-semibold text-[#0162E8] cursor-pointer'>Set Day</p>
+                    </div>
+                    <MobileNotification />
+                    <MobileNotification />
+                    <MobileNotification />
+                    <MobileNotification />
+                    <MobileNotification />
+                    <MobileNotification />
+                </div>
+
             </div>
         </>
 

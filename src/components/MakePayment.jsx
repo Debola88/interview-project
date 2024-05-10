@@ -103,7 +103,7 @@ function MakePayment() {
                 </ul>
             </div>
             <div className='w-full pt-4'>
-                <button type='submit' className='rounded-lg text-sm max-md:text-base px-4 py-2 max-md:py-4 bg-[#186BAD] mt-5 text-white font-semibold w-auto max-md:w-full'>Confirm Payment</button>
+                <button type='submit' className='rounded-lg text-sm max-md:text-base px-4 py-2 max-md:py-4 bg-[#186BAD] mt-5 text-white hover:bg-[#186BAD]/70 transition-all duration-300 font-semibold w-auto max-md:w-full'>Confirm Payment</button>
             </div>
         </div>
     )
