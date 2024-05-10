@@ -3,6 +3,7 @@ import { NavLink  } from 'react-router-dom';
 
 function NavBar() {
     const [active, setActive] = useState('Overview');
+    
 
     const handleNavClick = (item) => {
         setActive(item); // Update the active item
@@ -11,7 +12,7 @@ function NavBar() {
 
     const navItems = [
         { name: 'Overview', path: '/' },
-        { name: 'Progress', path: '#' },
+        { name: 'Progress'},
         { name: 'Notification', path: '/notification' },
     ];
 

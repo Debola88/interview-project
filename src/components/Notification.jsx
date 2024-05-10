@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from './NavBar'
 import NotificationBar from './NotificationBar';
 import MobileNotification from './MobileNotification';
 
@@ -9,7 +8,6 @@ function Notification() {
 
     return (
         <>
-            <NavBar />
             <div className='px-14 max-md:px-5 pt-12 max-md:pt-0 relative mx-auto pb-24'>
                 <h1 className='max-md:hidden font-bold text-3xl  max-md:text-2xl pb-8 w-full'>Notifications</h1>
 

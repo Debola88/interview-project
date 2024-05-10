@@ -43,6 +43,7 @@ const MobileSidebar = () => {
         setIsDropdowntwoOpen(!isDropdowntwoOpen);
     };
 
+
     const getPageName = (path) => {
         switch (path) {
             case '/':
@@ -165,7 +166,7 @@ const MobileSidebar = () => {
                                     <Link to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>My Tutors</span></Link>
                                 </li>
                                 <li>
-                                    <Link to="/managetutor"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Manage Tutors</span></Link>
+                                    <Link to="/managetutor" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Manage Tutors</span></Link>
                                 </li>
                             </ul>
                         </Transition>
@@ -201,7 +202,7 @@ const MobileSidebar = () => {
                         >
                             <ul>
                                 <li>
-                                    <Link to="/makepayment"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Make Payment</span></Link>
+                                    <Link to="/makepayment" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Make Payment</span></Link>
                                 </li>
                                 <li>
                                     <Link to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Payment History</span></Link>

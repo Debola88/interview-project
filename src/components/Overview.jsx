@@ -6,7 +6,6 @@ import man2 from '../assets/Ellipse 260 (2).png'
 import { HiClipboardList, HiOutlineSearch } from "react-icons/hi";
 import MyTutors from './MyTutors'
 import RangeSlider from './RangeSlider'
-import NavBar from './NavBar'
 
 
 
@@ -15,7 +14,6 @@ function Overview() {
 
     return (
         <>
-            <NavBar />
             <div className='px-14 max-md:px-5 pt-12 max-md:pt-0 relative mx-auto pb-24'>
                 <h1 className='max-md:hidden font-bold text-3xl  max-md:text-2xl pb-8 w-full'>Overview</h1>
 
