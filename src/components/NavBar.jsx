@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink  } from 'react-router-dom';
 
 function NavBar() {
-    const [active, setActive] = useState('Dashboard');
+    const [active, setActive] = useState('Overview');
 
     const handleNavClick = (item) => {
         setActive(item); // Update the active item
@@ -11,7 +11,7 @@ function NavBar() {
 
     const navItems = [
         { name: 'Overview', path: '/' },
-        { name: 'Progress', path: '/' },
+        { name: 'Progress', path: '#' },
         { name: 'Notification', path: '/notification' },
     ];
 

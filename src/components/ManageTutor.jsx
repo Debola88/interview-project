@@ -6,7 +6,6 @@ import Tutors from './Tutors'
 function ManageTutor() {
 
 
-
     return (
         <div className=' px-14 max-md:px-5 pt-12 max-md:pt-10 relative mx-auto pb-24'>
             <h1 className='max-md:hidden font-bold text-3xl  max-md:text-2xl pb-8 w-full'>Manage Tutors</h1>
