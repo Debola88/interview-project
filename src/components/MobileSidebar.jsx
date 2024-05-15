@@ -56,6 +56,8 @@ const MobileSidebar = () => {
                 return 'Make Payment';
             case '/managetutor':
                 return 'Manage Tutors';
+                case '/progresstracker':
+                    return 'Dashboard';
             default:
                 return 'Page Not Found';
         }
@@ -110,13 +112,13 @@ const MobileSidebar = () => {
                         >
                             <ul>
                                 <li>
-                                    <Link to="/"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Overview</span></Link>
+                                    <Link to="/" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Overview</span></Link>
                                 </li>
                                 <li>
-                                    <span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Progress Tracker</span>
+                                <Link to="/progresstracker" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Progress Tracker</span></Link>
                                 </li>
                                 <li>
-                                    <Link to="/notification"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Notification</span></Link>
+                                    <Link to="/notification" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Notification</span></Link>
                                 </li>
                             </ul>
                         </Transition>

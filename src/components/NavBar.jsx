@@ -12,7 +12,7 @@ function NavBar() {
 
     const navItems = [
         { name: 'Overview', path: '/' },
-        { name: 'Progress'},
+        { name: 'Progress', path: '/progresstracker'},
         { name: 'Notification', path: '/notification' },
     ];
 

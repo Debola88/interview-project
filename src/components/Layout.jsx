@@ -10,7 +10,7 @@ function Layout() {
     const location = useLocation(); // Get the current route
 
     // Define paths where the header should be shown
-    const showHeader = ['/', '/notification'];
+    const showHeader = ['/', '/notification', '/progresstracker'];
 
     return (
         <div className='flex flex-col bg-[#FFFFFF] max-md:bg-neutral-100 h-screen w-screen overflow-hidden'>

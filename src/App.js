@@ -7,6 +7,7 @@ import Refer from './components/Refer';
 import MakePayment from './components/MakePayment';
 import ManageTutor from './components/ManageTutor';
 import ScrollReset from './components/ScrollReset';
+import ProgressTracker from './components/ProgressTracker';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='refer' element={<Refer />} />
           <Route path='makepayment' element={<MakePayment />} />
           <Route path='managetutor' element={<ManageTutor />} />
+          <Route path='progresstracker' element={<ProgressTracker />} />
         </Route>
         <Route path='login' element={<div>this is login page</div>} />
       </Routes>

@@ -62,7 +62,7 @@ function SideBar() {
                                 <NavLink to="/"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Overview</span></NavLink>
                             </li>
                             <li>
-                                <span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Progress Tracker</span>
+                                <NavLink to="/progresstracker"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Progress Tracker</span></NavLink>
                             </li>
                             <li>
                                 <NavLink to="/notification"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Notification</span></NavLink>
@@ -70,7 +70,6 @@ function SideBar() {
                         </ul>
                     </Transition>
                 </div>
-
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><img src={imgclass} alt='' />Class<FaAngleRight /></span>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><MdOutlineAssignment />Assignment<FaAngleRight /></span>
                 <div className='w-full'>
