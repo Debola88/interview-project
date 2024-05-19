@@ -131,7 +131,7 @@ const MobileSidebar = () => {
                     </li>
 
                     <li className=" pt-10">
-                        <Link to="#" onClick={toggleSidebar}>
+                        <Link to="/upcomingclasses" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <img src={imgclass} alt='' />Class
                                 <span className='ml-auto'>
