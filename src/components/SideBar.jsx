@@ -96,7 +96,7 @@ function SideBar() {
                                 <NavLink to="/myclasses"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>My Classes</span></NavLink>
                             </li>
                             <li>
-                                <NavLink to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Upcoming Classes</span></NavLink>
+                                <NavLink to="/upcomingclasses"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Upcoming Classes</span></NavLink>
                             </li>
                             <li>
                                 <NavLink to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Reschedule</span></NavLink>
