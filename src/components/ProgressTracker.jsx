@@ -39,7 +39,6 @@ function ProgressTracker() {
                         <TestList />
                         <TestList />
                     </div>
-
                 </div>
                 <div className='w-full md:hidden'>
                     <div>

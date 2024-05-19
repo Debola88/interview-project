@@ -8,6 +8,9 @@ import MakePayment from './components/MakePayment';
 import ManageTutor from './components/ManageTutor';
 import ScrollReset from './components/ScrollReset';
 import ProgressTracker from './components/ProgressTracker';
+import MyClasses from './components/MyClasses';
+import UpcomingClasses from './components/UpcomingClasses';
+import Reschedule from './components/Reschedule';
 
 
 
@@ -24,6 +27,9 @@ function App() {
           <Route path='makepayment' element={<MakePayment />} />
           <Route path='managetutor' element={<ManageTutor />} />
           <Route path='progresstracker' element={<ProgressTracker />} />
+          <Route path='myclasses' element={<MyClasses />} />
+          <Route path='upcomingclasses' element={<UpcomingClasses />} />
+          <Route path='reschedule' element={<Reschedule />} />
         </Route>
         <Route path='login' element={<div>this is login page</div>} />
       </Routes>

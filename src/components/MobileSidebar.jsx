@@ -56,8 +56,14 @@ const MobileSidebar = () => {
                 return 'Make Payment';
             case '/managetutor':
                 return 'Manage Tutors';
-                case '/progresstracker':
-                    return 'Dashboard';
+            case '/progresstracker':
+                return 'Dashboard';
+            case '/myclasses':
+                return 'My Schedule';
+            case '/upcomingclasses':
+                return 'My Schedule';
+            case '/reschedule':
+                return 'My Schedule';
             default:
                 return 'Page Not Found';
         }
@@ -115,7 +121,7 @@ const MobileSidebar = () => {
                                     <Link to="/" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Overview</span></Link>
                                 </li>
                                 <li>
-                                <Link to="/progresstracker" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Progress Tracker</span></Link>
+                                    <Link to="/progresstracker" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Progress Tracker</span></Link>
                                 </li>
                                 <li>
                                     <Link to="/notification" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Notification</span></Link>
@@ -149,7 +155,7 @@ const MobileSidebar = () => {
                     {/* mobile version */}
                     <li className="">
                         <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdowntwo}>
-                        <img src={imgtutor} alt='' />Tutors
+                            <img src={imgtutor} alt='' />Tutors
                             <span className='ml-auto'>
                                 <FaAngleRight />
                             </span>

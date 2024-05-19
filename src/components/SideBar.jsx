@@ -38,6 +38,12 @@ function SideBar() {
         setIsDropdowntwoOpen(!isDropdowntwoOpen);
     };
 
+    const [isDropdownthreeOpen, setIsDropdownthreeOpen] = useState(false);
+
+    const toggleDropdownthree = () => {
+        setIsDropdownthreeOpen(!isDropdownthreeOpen);
+    };
+
 
     return (
         <div className='max-lg:hidden bg-gradient-to-b from-[#1B87E1E0]/[88%] to-[#0C2E4A] w-52 flex flex-col text-[#FFFFFF] text-sm'>
@@ -70,7 +76,34 @@ function SideBar() {
                         </ul>
                     </Transition>
                 </div>
-                <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><img src={imgclass} alt='' />Class<FaAngleRight /></span>
+                <div className='w-full'>
+                    <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/50 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdownthree}><img src={imgclass} alt='' />Class
+                        <span>
+                            <FaAngleRight />
+                        </span>
+                    </button>
+                    <Transition
+                        show={isDropdownthreeOpen}
+                        enter="transition-all duration-300 ease-in-out"
+                        enterFrom="max-h-0 opacity-0"
+                        enterTo="max-h-screen opacity-100"
+                        leave="transition-all duration-300 ease-in-out"
+                        leaveFrom="max-h-screen opacity-100"
+                        leaveTo="max-h-0 opacity-0"
+                    >
+                        <ul>
+                            <li>
+                                <NavLink to="/myclasses"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>My Classes</span></NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Upcoming Classes</span></NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="#"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Reschedule</span></NavLink>
+                            </li>
+                        </ul>
+                    </Transition>
+                </div>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><MdOutlineAssignment />Assignment<FaAngleRight /></span>
                 <div className='w-full'>
                     <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/50 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdownone}><img src={imgtutor} alt='' />Tutors
