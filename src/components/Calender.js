@@ -71,7 +71,7 @@ const Calendar = () => {
           >
             <span className="block mb-2">{formattedDate}</span>
             {reminders[formattedFullDate] && (
-              <div className="text-xs text-gray-700 mt-1">
+              <div className="text-xs text-gray-700 mt-1 overflow-hidden">
                 {reminders[formattedFullDate]}
               </div>
             )}
