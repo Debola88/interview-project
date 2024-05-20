@@ -79,7 +79,7 @@ const Calendar = () => {
         );
         day = addDays(day, 1);
       }
-      rows.push(<div className="grid grid-cols-7 gap-1 sm:gap-2" key={day}>{days}</div>);
+      rows.push(<div className="grid grid-cols-7 gap-1 sm:pt-2 pt-1 sm:gap-2" key={day}>{days}</div>);
       days = [];
     }
     return <div>{rows}</div>;
