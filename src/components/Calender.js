@@ -130,7 +130,7 @@ const Calendar = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="fixed inset-0 bg-black opacity-50" onClick={closeModal}></div>
           <div className="bg-white p-6 rounded-lg shadow-lg z-10 w-full max-w-md mx-2">
-            <h3 className="text-lg font-medium leading-6 text-gray-900 mb-4">{`Manage Reminder for ${format(selectedDate, 'MMMM d, yyyy')}`}</h3>
+            <h3 className="text-lg font-medium leading-6 text-gray-900 mb-4">{`Manage Schedule for ${format(selectedDate, 'MMMM d, yyyy')}`}</h3>
             <textarea
               className="w-full h-24 p-2 border rounded-lg mb-4"
               value={newReminder}
