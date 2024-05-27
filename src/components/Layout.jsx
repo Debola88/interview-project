@@ -5,6 +5,7 @@ import Header from './Header'
 import 'simplebar-react/dist/simplebar.min.css';
 import NavBar from './NavBar';
 import ClassNav from './ClassNav';
+import SettingsNav from './SettingsNav';
 
 function Layout() {
 
@@ -15,9 +16,12 @@ function Layout() {
 
     const showClassHeader = ['/myclasses', '/upcomingclasses', '/reschedule'];
 
+    const showSettingsHeader = ['/accountsettings', '/security', '/profilesummary'];
+
+
 
     return (
-        <div className='flex flex-col bg-[#FFFFFF] max-md:bg-neutral-100 h-screen w-screen overflow-hidden'>
+        <div className='flex flex-col bg-[#FFFFFF] max-md:bg-neutral-100 h-screen min-h-screen w-screen overflow-hidden'>
             <Header />
             <div className='flex flex-row h-full '>
                 <SideBar />
@@ -28,6 +32,9 @@ function Layout() {
                         )}
                         {showClassHeader.includes(location.pathname) && (
                             <ClassNav />
+                        )}
+                         {showSettingsHeader.includes(location.pathname) && (
+                            <SettingsNav />
                         )}
                         <Outlet />
                     </div>

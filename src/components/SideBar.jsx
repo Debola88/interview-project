@@ -44,6 +44,12 @@ function SideBar() {
         setIsDropdownthreeOpen(!isDropdownthreeOpen);
     };
 
+    const [isDropdownfourOpen, setIsDropdowntfourOpen] = useState(false);
+
+    const toggleDropdownfour = () => {
+        setIsDropdowntfourOpen(!isDropdownfourOpen);
+    };
+
 
     return (
         <div className='max-lg:hidden bg-gradient-to-b from-[#1B87E1E0]/[88%] to-[#0C2E4A] w-52 flex flex-col text-[#FFFFFF] text-sm'>
@@ -157,7 +163,34 @@ function SideBar() {
                     </Transition>
                 </div>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 mt-10 border border-[#FFFFFF]/10'><MdOutlineFeedback />Feedback</span>
-                <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 mt-16 border border-[#FFFFFF]/10'><IoSettingsOutline />Settings<FaAngleRight /></span>
+                <div className='w-full mt-10'>
+                    <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/50 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdownfour}><IoSettingsOutline />Settings
+                        <span>
+                            <FaAngleRight />
+                        </span>
+                    </button>
+                    <Transition
+                        show={isDropdownfourOpen}
+                        enter="transition-all duration-300 ease-in-out"
+                        enterFrom="max-h-0 opacity-0"
+                        enterTo="max-h-screen opacity-100"
+                        leave="transition-all duration-300 ease-in-out"
+                        leaveFrom="max-h-screen opacity-100"
+                        leaveTo="max-h-0 opacity-0"
+                    >
+                        <ul>
+                            <li>
+                                <NavLink to="/accountsettings"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Account Settings</span></NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/security"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Login & Security</span></NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/profilesummary"><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Profile Summary</span></NavLink>
+                            </li>
+                        </ul>
+                    </Transition>
+                </div>
                 <span className='flex items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'><MdLogout />Logout<FaAngleRight /></span>
                 <img src={refer} alt='' className='w-full h-auto mt-5' />
                 <NavLink to="/refer"><button className='py-3 mb-16 w-full bg-[#186BAD] hover:bg-[#186BAD]/50 transition-all  rounded'>Refer & Earn</button></NavLink>

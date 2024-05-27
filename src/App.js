@@ -11,6 +11,9 @@ import ProgressTracker from './components/ProgressTracker';
 import MyClasses from './components/MyClasses';
 import UpcomingClasses from './components/UpcomingClasses';
 import Reschedule from './components/Reschedule';
+import AccountSettings from './components/AccountSettings';
+import Security from './components/Security';
+import ProfileSummary from './components/ProfileSummary';
 
 
 
@@ -30,6 +33,9 @@ function App() {
           <Route path='myclasses' element={<MyClasses />} />
           <Route path='upcomingclasses' element={<UpcomingClasses />} />
           <Route path='reschedule' element={<Reschedule />} />
+          <Route path='accountsettings' element={<AccountSettings />} />
+          <Route path='security' element={<Security />} />
+          <Route path='profilesummary' element={<ProfileSummary />} />
         </Route>
         <Route path='login' element={<div>this is login page</div>} />
       </Routes>

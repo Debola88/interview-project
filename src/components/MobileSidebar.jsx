@@ -49,6 +49,12 @@ const MobileSidebar = () => {
         setIsDropdownthreeOpen(!isDropdownthreeOpen);
     };
 
+    const [isDropdownfourOpen, setIsDropdownfourOpen] = useState(false);
+
+    const toggleDropdownfour = () => {
+        setIsDropdownfourOpen(!isDropdownfourOpen);
+    };
+
 
     const getPageName = (path) => {
         switch (path) {
@@ -70,6 +76,12 @@ const MobileSidebar = () => {
                 return 'My Schedule';
             case '/reschedule':
                 return 'My Schedule';
+            case '/accountsettings':
+                return 'Settings';
+            case '/security':
+                return 'Settings';
+            case '/profilesummary':
+                return 'Settings';
             default:
                 return 'Page Not Found';
         }
@@ -266,8 +278,8 @@ const MobileSidebar = () => {
                         </Link>
                     </li>
 
-                    <li className="pt-10">
-                        <Link to="#" onClick={toggleSidebar}>
+                    <li className="pt-10 md:hidden">
+                        <Link to="/accountsettings" onClick={toggleSidebar}>
                             <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>
                                 <IoSettingsOutline />Settings
                                 <span className='ml-auto'>
@@ -275,6 +287,36 @@ const MobileSidebar = () => {
                                 </span>
                             </button>
                         </Link>
+                    </li>
+                    {/* Mobile version */}
+                    <li className="pt-10 max-md:hidden">
+                        <button className='flex w-full outline-none items-center gap-2 bg-[#1F70B2] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10' onClick={toggleDropdownfour}>
+                            <IoSettingsOutline />Settings
+                            <span className='ml-auto'>
+                                <FaAngleRight />
+                            </span>
+                        </button>
+                        <Transition
+                            show={isDropdownfourOpen}
+                            enter="transition-all duration-300 ease-in-out"
+                            enterFrom="max-h-0 opacity-0"
+                            enterTo="max-h-screen opacity-100"
+                            leave="transition-all duration-300 ease-in-out"
+                            leaveFrom="max-h-screen opacity-100"
+                            leaveTo="max-h-0 opacity-0"
+                        >
+                            <ul>
+                                <li>
+                                    <Link to="/accountsettings" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Account Settings</span></Link>
+                                </li>
+                                <li>
+                                    <Link to="/security" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Login & Security</span></Link>
+                                </li>
+                                <li>
+                                    <Link to="/profilesummary" onClick={toggleSidebar}><span className='flex items-center justify-center gap-2 bg-[#1D8EED]/[78%] hover:bg-[#1F70B2]/10 transition-all cursor-pointer px-2 py-2 border border-[#FFFFFF]/10'>Profile Summary</span></Link>
+                                </li>
+                            </ul>
+                        </Transition>
                     </li>
                     <li className="">
                         <Link to="#" onClick={toggleSidebar}>
