@@ -25,7 +25,7 @@ function Layout() {
             <Header />
             <div className='flex flex-row h-full '>
                 <SideBar />
-                <div className="flex-1 min-h-full relative overflow-y-auto">
+                <div className="flex-1 md:min-h-full relative overflow-y-auto">
                     <div className='absolute w-full min-h-screen overflow-auto'>
                         {showHeader.includes(location.pathname) && (
                             <NavBar />

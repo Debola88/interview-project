@@ -14,7 +14,7 @@ import MobileSidebar from './MobileSidebar';
 
 function Header() {
     return (
-        <div className="bg-[#FFFFFF] h-[4.5rem] px-6 flex items-center border-b shadow-xl justify-between float-left z-20">
+        <div className="bg-[#FFFFFF] h-[4.5rem] px-5 flex items-center border-b shadow-xl justify-between float-left z-20">
             <div className='lg:hidden'>
                 <MobileSidebar />
             </div>
