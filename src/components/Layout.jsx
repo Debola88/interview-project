@@ -16,7 +16,7 @@ function Layout() {
 
     const showClassHeader = ['/myclasses', '/upcomingclasses', '/reschedule'];
 
-    const showSettingsHeader = ['/accountsettings', '/security', '/profilesummary'];
+    const showSettingsHeader = ['/accountsettings', '/security', '/profilesummary', '/security/twofactor'];
 
 
 

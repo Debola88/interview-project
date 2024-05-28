@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, addMonths, subMonths } from 'date-fns';
 
 
@@ -9,13 +9,11 @@ const Calendar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newReminder, setNewReminder] = useState('');
 
-  // Load reminders from localStorage when the component mounts
   useEffect(() => {
     const storedReminders = JSON.parse(localStorage.getItem('reminders')) || {};
     setReminders(storedReminders);
   }, []);
 
-  // Save reminders to localStorage whenever reminders state changes
   useEffect(() => {
     localStorage.setItem('reminders', JSON.stringify(reminders));
   }, [reminders]);

@@ -82,6 +82,8 @@ const MobileSidebar = () => {
                 return 'Settings';
             case '/profilesummary':
                 return 'Settings';
+            case '/security/twofactor':
+                return 'Settings';
             default:
                 return 'Page Not Found';
         }
