@@ -21,7 +21,7 @@ function ProgressTracker() {
                         <span><MdKeyboardDoubleArrowRight /></span>
                     </div>
                 </div>
-                <div className='w-full border-2 max-md:hidden p-5 rounded-xl '>
+                <div className='w-full shadow-lg bg-[#ffffff] max-md:hidden p-5 rounded-xl '>
                     <ul className='flex items-center justify-between text-sm font-semibold text-[#757575] mb-5'>
                         <li className='w-[300px]'>Test</li>
                         <li className='w-[80px] text-center'>Marks</li>
