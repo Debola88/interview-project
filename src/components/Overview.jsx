@@ -19,7 +19,7 @@ function Overview() {
         <div className="max-md:hidden border-[#969696] absolute w-full left-0"></div>
 
   
-        <div className="flex mx-auto gap-10 max-md:flex-col">
+        <div className="flex mx-auto gap-10 max-lg:flex-col">
           <main className="w-full max-w-full max-md:pt-3">
             <UpcomingClasseChart />
           </main>

@@ -13,7 +13,7 @@ function Tutors() {
 
     return (
         <div>
-            <div className='flex gap-3 border-b border-t pt-4 pb-4 items-center w-full justify-between'>
+            <div className='flex gap-3 border-b pt-4 pb-4 items-center w-full justify-between'>
                 <input
                     className='text-blue-600 border-[#D6D8DB] focus:ring-0'
                     type="checkbox"

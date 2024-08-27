@@ -69,7 +69,7 @@ const options = {
 
 const UpcomingClassChart = () => {
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto w-auto">
       {/* <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Upcoming Classes</h2> */}
       <div className="bg-[#ffffff] shadow-lg rounded-lg p-5">
       <div className="flex justify-between w-full pb-5 items-center ">

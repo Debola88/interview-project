@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, addMonths, subMonths } from 'date-fns';
 
-
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [reminders, setReminders] = useState({});
+  const [titles, setTitles] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newReminder, setNewReminder] = useState('');
+  const [newTitle, setNewTitle] = useState('');
 
   useEffect(() => {
     const storedReminders = JSON.parse(localStorage.getItem('reminders')) || {};
+    const storedTitles = JSON.parse(localStorage.getItem('titles')) || {};
     setReminders(storedReminders);
+    setTitles(storedTitles);
   }, []);
 
   useEffect(() => {
     localStorage.setItem('reminders', JSON.stringify(reminders));
-  }, [reminders]);
+    localStorage.setItem('titles', JSON.stringify(titles));
+  }, [reminders, titles]);
 
   const renderHeader = () => {
     const dateFormat = "MMMM yyyy";
@@ -68,9 +72,9 @@ const Calendar = () => {
             onClick={() => openModal(cloneDay)}
           >
             <span className="block mb-2">{formattedDate}</span>
-            {reminders[formattedFullDate] && (
-              <div className="text-xs text-gray-700 mt-1 overflow-hidden">
-                {reminders[formattedFullDate]}
+            {titles[formattedFullDate] && (
+              <div className="text-xs font-semibold text-gray-900 mt-1 overflow-hidden">
+                {titles[formattedFullDate]}
               </div>
             )}
           </div>
@@ -91,26 +95,37 @@ const Calendar = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };
 
-  const addReminder = (date, reminder) => {
+  const addReminder = (date, title, reminder) => {
+    const formattedDate = format(date, 'yyyy-MM-dd');
     setReminders({
       ...reminders,
-      [format(date, 'yyyy-MM-dd')]: reminder,
+      [formattedDate]: reminder,
+    });
+    setTitles({
+      ...titles,
+      [formattedDate]: title,
     });
     setNewReminder('');
+    setNewTitle('');
     closeModal();
   };
 
   const deleteReminder = (date) => {
     const formattedDate = format(date, 'yyyy-MM-dd');
     const updatedReminders = { ...reminders };
+    const updatedTitles = { ...titles };
     delete updatedReminders[formattedDate];
+    delete updatedTitles[formattedDate];
     setReminders(updatedReminders);
+    setTitles(updatedTitles);
     closeModal();
   };
 
   const openModal = (day) => {
     setSelectedDate(day);
-    setNewReminder(reminders[format(day, 'yyyy-MM-dd')] || '');
+    const formattedDate = format(day, 'yyyy-MM-dd');
+    setNewReminder(reminders[formattedDate] || '');
+    setNewTitle(titles[formattedDate] || '');
     setIsModalOpen(true);
   };
 
@@ -129,6 +144,12 @@ const Calendar = () => {
           <div className="fixed inset-0 bg-black opacity-50" onClick={closeModal}></div>
           <div className="bg-white p-6 rounded-lg shadow-lg z-10 w-full max-w-md mx-2">
             <h3 className="text-lg font-medium leading-6 text-gray-900 mb-4">{`Manage Schedule for ${format(selectedDate, 'MMMM d, yyyy')}`}</h3>
+            <input
+              className="w-full h-10 p-2 border rounded-lg mb-2"
+              value={newTitle}
+              onChange={(e) => setNewTitle(e.target.value)}
+              placeholder="Enter the title"
+            />
             <textarea
               className="w-full h-24 p-2 border rounded-lg mb-4"
               value={newReminder}
@@ -154,7 +175,7 @@ const Calendar = () => {
                 <button
                   type="button"
                   className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-                  onClick={() => addReminder(selectedDate, newReminder)}
+                  onClick={() => addReminder(selectedDate, newTitle, newReminder)}
                 >
                   Save
                 </button>
